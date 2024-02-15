@@ -1,0 +1,57 @@
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="FormularioRegistro" (ngSubmit)="GuardarDatos()">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="Nombre" class="form-label">Nombre de Usuario</label>
+                        <input type="text" id="Nombre" class="form-control" formControlName="Nombre">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="Correo" class="form-label">Correo</label>
+                        <input type="email" id="Correo" class="form-control" formControlName="Correo">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="Contrasena" class="form-label">Contraseña</label>
+                        <input type="password" id="Contrasena" class="form-control" formControlName="Contrasena">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="NombreNegocio" class="form-label">Nombre del Negocio</label>
+                        <input type="text" id="NombreNegocio" class="form-control" formControlName="NombreNegocio">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="Ruc" class="form-label">RUC</label>
+                        <input type="text" id="Ruc" class="form-control" formControlName="Ruc">
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" id="direccion" class="form-control" formControlName="Direccion">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group d-grid gap-2 col-10 mx-auto mt-4">
+                <button [disabled]="FormularioRegistro.invalid" type="submit" class="btn btn-success btn-block"><i class="bi bi-database"></i> Agregar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
